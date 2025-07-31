@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./assets/img/image4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    color: #fff;
+}
