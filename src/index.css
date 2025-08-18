@@ -9,3 +9,15 @@ body{
     background-attachment: fixed ;
     color: #fff;
 }
+
+.flex-center{
+    @apply flex justify-center items-center
+}
+
+.page-frame{
+    @apply px-[2%] py-[1%] 
+}
+
+.btn{
+    @apply px-6 py-1 text-lg backdrop:blur-lg border
+}

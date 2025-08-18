@@ -25,7 +25,7 @@ const Details = () => {
         fetchItemDetailById()
     }, [movies])
   return (
-    <div>
+    <div className="page-frame">
       {
         itemsDetail? (
             <>

@@ -10,17 +10,19 @@ import Details from "./pages/Details";
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full">
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie" element={<Movie />} />
-        <Route path="/series" element={<Series />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/details/:itemId" element={<Details />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie" element={<Movie />} />
+          <Route path="/series" element={<Series />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/details/:itemId" element={<Details />} />
+        </Routes>
+      </div>
     </div>
   );
 };
