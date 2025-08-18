@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from "react";
+import { VITE_API_KEY, VITE_BASE_URL } from "../Constants/constant";
 
 export const MoviesContext = createContext();
 
 const MoviesContextProvider = (props) => {
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const BASE_URL = import.meta.env.VITE_BASE_URL;
+  const API_KEY = import.meta.env.VITE_API_KEY || VITE_API_KEY;
+  const BASE_URL = import.meta.env.VITE_BASE_URL || VITE_BASE_URL;
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
