@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./assets/img/image4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    color: #fff;
+}
+
+.flex-center{
+    @apply flex justify-center items-center
+}
+
+.page-frame{
+    @apply px-[2%] py-[1%] 
+}
+
+.btn{
+    @apply px-6 py-1 text-lg backdrop:blur-lg border
+}
