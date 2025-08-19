@@ -10,8 +10,11 @@ const MoviesContextProvider = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  //   let currentPage = 1;
+
+    // let currentPage = 1;
   // let totalPages = 1;
+  //const fullURL = `${BASE_URL}${endpoint}&page=${page}`;
+  //   console.log("Requesting:", fullURL);
 
   const fetchMovies = async (page) => {
     setLoading(true);
@@ -19,11 +22,9 @@ const MoviesContextProvider = (props) => {
 
     try {
       const endpoint = `/movie/popular?api_key=${API_KEY}&language=en-US`;
-      //   const fullURL = `${BASE_URL}${endpoint}&page=${page}`;
-      //   console.log("Requesting:", fullURL);
       const response = await fetch(`${BASE_URL}${endpoint}&page=${page}`);
       const data = await response.json();
-      // console.log("Data ->: ", data);
+      
       if (data && data.results) {
         setMovies(data.results);
       } else {
